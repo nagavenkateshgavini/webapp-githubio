@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-Factor Cloud Native Web Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+        header, footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            padding: 2rem;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        .project-description {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .architecture-diagram {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .architecture-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>12-Factor Cloud Native Web Application</h1>
+    </header>
+    <div class="container">
+        <section class="project-description">
+            <h2>Project Description</h2>
+            <p>The 12-factor app is a methodology for building software-as-a-service (SaaS) applications that are cloud-native and distributed. The 12 factors are a set of best practices that are independent of programming languages and software stacks, and can be applied to a variety of apps. The goal of the 12-factor app is to make applications more portable, resilient, scalable, and robust when deployed to the web. Used Google Cloud Platform to develop this. Made with Love and Fun.</p>
+            <p>This repository can act as a tutorial or example project for the following concepts:</p>
+            <ul>
+                <li>Employed 12-factor methodology to create a user auth CI/CD project with cloud and DevOps best practices.</li>
+            </ul>
+        </section>
+        <section class="architecture-diagram">
+            <h2>Architecture Diagram</h2>
+            <img src="csye6225.jpeg" alt="Architecture Diagram">
+        </section>
+        <section class="project-description">
+            <h2>Implementation Details</h2>
+            <p>Developed a robust RESTful API using Python Flask, PostgreSQL, and Pytest.</p>
+            <p>Utilized REST Assured for comprehensive integration testing, ensuring reliability and performance.</p>
+            <p>Crafted custom compute engine images using HashiCorp Packer.</p>
+            <p>Implemented systemd service files for smooth application startup.</p>
+            <p>Established secure VPCs, subnets, and CloudSQL instances.</p>
+            <p>Enabled VPC peering and private service access for enhanced security.</p>
+            <p>Leveraged Cloud DNS for seamless domain resolution.</p>
+            <p>Configured Ops Agent for streamlined application logging, ensuring observability and troubleshooting ease.</p>
+            <p>Orchestrated message publication to Google Pub/Sub topics.</p>
+            <p>Triggered Cloud Functions for automated email verification using Sinch Mailgun.</p>
+            <p>Engineered compute instance templates, managed instance groups, and load balancers for autoscaling based on the CPU utilization metrics.</p>
+            <p>Implemented SSL certificates managed by GCP.</p>
+            <p>Enabled automated rolling updates on merge to ensure seamless deployment.</p>
+        </section>
+        <section class="project-description">
+            <h2>Other Repositories in this Project</h2>
+            <ul>
+                <li><a href="https://github.com/nagavenkateshgavini/tf-gcp-infra">Terraform code to build Infrastructure on GCP platform</a></li>
+                <li><a href="https://github.com/nagavenkateshgavini/serverless">Cloud Function Repo or Serverless code</a></li>
+            </ul>
+            <h3>Packer Commands</h3>
+            <ul>
+                <li>Install plugins</li>
+                <li>packer init packer/gci-machine-image.pkr.hcl</li>
+                <li>Format the packer file</li>
+                <li>packer fmt packer/gci-machine-image.pkr.hcl</li>
+                <li>Validate packer configuration</li>
+                <li>packer validate packer/gci-machine-image.pkr.hcl</li>
+                <li>Build Image and upload to Google Cloud</li>
+                <li>packer build packer/gci-machine-image.pkr.hcl</li>
+            </ul>
+            <p><strong>Note:</strong> In an ideal situation when a developer raises a PR, GitHub actions automatically trigger the integration tests, build the GCI image, and deploy in the GCP cloud automatically. Please check out the GitHub actions for more details.</p>
+        </section>
+    </div>
+    <footer>
+        <p>“Truth can only be found in one place: the code.” - Robert C. Martin</p>
+    </footer>
+</body>
+</html>
